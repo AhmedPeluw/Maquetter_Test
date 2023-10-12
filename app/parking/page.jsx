@@ -1,54 +1,6 @@
 'use client'
 import styled from 'styled-components';
 
-const HomeContainer = styled.div`  
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;    
-`;
-
-const firstTitle = {  
-  marginTop: '27px',
-  marginBottom: '13px',
-  fontSize: '30px',
-  
-}
-const secondTitle = {
-  marginBottom: '25px',
-  marginTop: '125px',
-  fontSize: '25px'
-}
-
-const Title = styled.h1` 
-  font-weight: 900;
-  letter-spacing: 0.4px;
-  ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
-  color: #303189;
-
-  span {
-    display: block;
-    margin-top: -7px;
-    text-align: center;
-    font-weight:400;
-    font-size:30
-  }
-`;
-
-const Button = styled.button`
-  ${(props) => (props.$buttonOrder === 'second' ? {marginTop:'50px'} : {marginTop:'33px'})}
-  background-color: #000;
-  color: #ffffff;
-  border: none;
-  padding: 8px;
-  border-radius: 30px;
-  width: 274px;
-  height: 45px;
-  cursor: pointer;
-  z-index: 2;
-`;
-
 const StyledImage = styled.img`
   width: 374px;
   height: 300px;
@@ -56,7 +8,6 @@ const StyledImage = styled.img`
 `;
 
 const HorizontalImage = styled.div`
-
   flex: 0 0 auto;
   margin-right: 10px;
   position: relative;
@@ -109,13 +60,60 @@ const HorizontalImage = styled.div`
     width: ${(props) => (props.$isMiddle ? '196px' : '172px')};
     height: ${(props) => (props.$isMiddle ? '262px' : '230px')};
   }
-  
+`;
+
+const HomeContainer = styled.div`  
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    
+`;
+
+const firstTitle = {  
+  marginTop: '27px',
+  marginBottom: '13px',
+  fontSize: '30px',  
+}
+
+const secondTitle = {
+  marginBottom: '25px',
+  marginTop: '125px',
+  fontSize: '25px'
+}
+
+const Title = styled.h1` 
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  ${(props) => (props.$titleOrder === 'second' ? secondTitle : firstTitle )}
+  color: #303189;
+
+  span {
+    display: block;
+    margin-top: -7px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+  }
+`;
+
+const Button = styled.button`
+  ${(props) => (props.$buttonOrder === 'second' ? {marginTop: '50px'} : {marginTop: '33px'})}
+  background-color: #000;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 30px;
+  width: 274px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 2;
 `;
 
 const HorizontalScrollContainer = styled.div`
-  width:414px;  
+  width: 414px;  
   display: flex;
-  align-items:center;
+  align-items: center;
   overflow-x: auto;
   margin-top: 20px;
 

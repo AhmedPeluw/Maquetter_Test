@@ -3,48 +3,8 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import ThinProgressBar from '@components/ThinProgressBar';
 
-const HomeContainer = styled.div`  
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;    
-`;
-
-const firstTitle = {
-  marginBottom: '45px',
-  marginTop: '27px',
-  fontSize: '30px'
-}
-const secondTitle = {
-  marginBottom: '25px',
-  marginTop: '52px',
-  fontSize: '25px'
-}
-
-const Title = styled.h1` 
-  font-weight: 900;
-  letter-spacing: 0.4px;
-  ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
-  color: #303189;
-`;
-
-const Button = styled.button`
-  ${(props) => (props.$buttonOrder === 'second' ? {marginTop:'50px'} : {marginTop:'33px'})}
-  background-color: #303189;
-  color: #ffffff;
-  border: none;
-  padding: 8px;
-  border-radius: 30px;
-  width: 274px;
-  height: 45px;
-  cursor: pointer;
-  z-index: 2;
-`;
-
 const ImageWithOverlay = styled.div`
   position: relative;
-
 
   img {
     width: 100%;
@@ -161,6 +121,46 @@ const HorizontalScrollContainer = styled.div`
     display: none;
   }
 `;
+
+const Button = styled.button`
+  ${(props) => (props.$buttonOrder === 'second' ? {marginTop:'50px'} : {marginTop:'33px'})}
+  background-color: #303189;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 30px;
+  width: 274px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 2;
+`;
+
+const firstTitle = {
+  marginBottom: '45px',
+  marginTop: '27px',
+  fontSize: '30px'
+}
+const secondTitle = {
+  marginBottom: '25px',
+  marginTop: '52px',
+  fontSize: '25px'
+}
+
+const Title = styled.h1` 
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  ${(props) => (props.$titleOrder ==='second' ? secondTitle : firstTitle )}
+  color: #303189;
+`;
+
+const HomeContainer = styled.div`  
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;    
+`;
+
 
 
 

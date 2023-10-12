@@ -75,7 +75,7 @@
 /* Tailwind Styles */
 
 .app {
-  @apply bg-black relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
 .black_btn {

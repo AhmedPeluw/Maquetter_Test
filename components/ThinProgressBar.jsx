@@ -2,18 +2,6 @@
 
 import styled from 'styled-components';
 
-const ProgressContainerWrapper = styled.div`
-  display: flex;
-  align-items: center;  
-  justify-content: center;
-  
-`;
-
-const ProgressContainer = styled.div`  
-  display: flex;
-  align-items: center;  
-`;
-
 const ProgressBar = styled.div`
   height: 2px;
   width: 30px;
@@ -26,6 +14,18 @@ const ProgressFill = styled.div`
   background-color: white; /* White fill color */
   width: ${({ $filled }) => ($filled ? '100%' : '50%')};
 `;
+
+const ProgressContainer = styled.div`  
+  display: flex;
+  align-items: center;  
+`;
+
+const ProgressContainerWrapper = styled.div`
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+`;
+
 
 const ThinProgressBar = ({ filled }) => (
   <ProgressContainerWrapper>
